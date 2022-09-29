@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const grid = document.querySelector('.grid');
-  const squares = document.querySelectorAll('.grid div');
+  let squares = Array.from(document.querySelectorAll('.grid div'));
   const ScoreDisplay = document.querySelector('#score');
   const StartBtn = document.querySelector('#start-button');
   const width = 10;
@@ -39,4 +39,22 @@ document.addEventListener('DOMContentLoaded', () => {
     [1, width+1, width*2+1, width*3+1],
     [width, width+1, width+2, width+3]
   ]
+
+  const theTetrominos = [lTetromino, zTetromino, tTetromino, oTetromino, iTetromino]
+
+  let currentPosition = 4
+  let currentRotation = 0
+
+  //randomly select a Tetromino and its first rotation
+  let random = Math.floor(Math.random()*theTetrominos.length)
+  let current = theTetrominos[random][currentRotation]
+
+  //draw the first rotation in the first tetromino
+  function draw() {
+    current.forEach(index => {
+        squares[currentPosition + index].classList.add('tetromino')
+    })
+  }
+
+  draw()
 });
