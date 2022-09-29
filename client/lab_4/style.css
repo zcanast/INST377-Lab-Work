@@ -39,7 +39,7 @@ a {
   text-decoration: none;
 }
 
-h2 {
+h2, h3 {
   margin:0;
   padding:0;
   padding-bottom:1.5rem;
@@ -139,7 +139,10 @@ form {
   flex: 1 2 auto;
   margin: 1rem;
   align-items: center;
+  justify-content: center;
   max-width: 450px;
+  display: flex;
+  flex-direction: column;
 }
 
 /*
@@ -303,6 +306,9 @@ form input {
     /* Rules in here will only apply when a screen is the correct size */
     /* check it out by using your developer tools to shrink your screen-size */
     .container {
-      background-color: rgba(199, 255, 176, 0.65);
+      background-color: rgba(255, 242, 176, 0.65);
+      flex-direction: column;
+      justify-content: center;
+      align-items: column;
     }
 }
