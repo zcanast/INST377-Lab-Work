@@ -55,8 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentPosition = 4;
   let currentRotation = 0;
 
-  console.log(theTetrominos[0][0]);
-
   // randomly select a Tetromino and its first rotation
   let random = Math.floor(Math.random() * theTetrominos.length);
   let current = theTetrominos[random][currentRotation];
@@ -65,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function draw() {
     current.forEach((index) => {
       squares[currentPosition + index].classList.add('tetromino');
-      squares[currentPosition + index].style.backgroundColor = color[random];
+      squares[currentPosition + index].style.backgroundColor = colors[random];
     });
   }
 
@@ -141,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
     draw();
   }
 
-  // fix rotation of tetrominos at the edge
+/*   // fix rotation of tetrominos at the edge
   function isAtRight() {
     return current.some((index) => (currentPosition + index + 1) % width === 0);
   }
@@ -151,6 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function checkRotatedPosition(P) {
+    // eslint-disable-next-line no-param-reassign
     P = P || currentPosition;
     if ((P + 1) % width < 4) {
       if (isAtRight()) {
@@ -164,15 +163,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   }
-
+ */
   function rotate() {
     undraw();
-    currentPosition++;
+    currentPosition += 1;
     if (currentRotation === current.length) {
       currentRotation = 0;
     }
     current = theTetrominos[random][currentRotation];
-    checkRotatedPosition();
     draw();
   }
 
