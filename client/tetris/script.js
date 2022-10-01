@@ -139,31 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
     draw();
   }
 
-/*   // fix rotation of tetrominos at the edge
-  function isAtRight() {
-    return current.some((index) => (currentPosition + index + 1) % width === 0);
-  }
-
-  function isAtLeft() {
-    return current.some((index) => (currentPosition + index) % width === 0);
-  }
-
-  function checkRotatedPosition(P) {
-    // eslint-disable-next-line no-param-reassign
-    P = P || currentPosition;
-    if ((P + 1) % width < 4) {
-      if (isAtRight()) {
-        currentPosition += 1;
-        checkRotatedPosition(P);
-      }
-    } else if (P % width > 5) {
-      if (isAtLeft()) {
-        currentPosition -= 1;
-        checkRotatedPosition(P);
-      }
-    }
-  }
- */
   function rotate() {
     undraw();
     currentPosition += 1;
