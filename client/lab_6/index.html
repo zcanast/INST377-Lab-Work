@@ -9,23 +9,35 @@
   <body>
     <div class="wrapper">
       <header class="header"><h1>Zoey Anastasiadis INST377 Labs</h1></header>
+      <!-- wrapper -->
       <div class="container">
+        <!-- container -->
         <div class="left_section box">
+            <!-- left inputs -->
             <h2>Form Inputs</h2>
             <form action="/api" class="box main_form">
                 <div>
                     <label for="resto">Restaurant Name</label>
                     <input type="text" name="resto" id="resto"/>
                 </div>
-                <button type="submit">Submit</button>
+                <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                <button type="submit" id="get-resto">Submit</button>
             </form>
         </div>
         <div class="right_section box">
+            <!-- right side -->
+            <!-- images box -->
             <h2>Local Restaurants</h2>
-            <div class="box" id="restaurant_list">A list of restaurants from an API</div>
+            <div class="box" id="restaurant_list">
+                <!-- description box -->
+                A list of restaurants from an API
+            </div>
         </div>
       </div>
-      <footer class="footer box"> My GitHub Account: <a href="http://github.com/zcanast/" target="_blank" rel="noopener noreferrer">zcanast</a></footer>
+      <footer class="footer">
+        My GitHub Account:
+        <a href="http://github.com/zcanast/" target="_blank" rel="noopener noreferrer">zcanast</a>
+    </footer>
     </div>
     <script src="script.js"></script>
   </body>
