@@ -1,0 +1,44 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zoey Anastasiadis' Labs for INST377</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header"><h1>Zoey Anastasiadis INST377 Labs</h1></header>
+      <!-- wrapper -->
+      <div class="container">
+        <!-- container -->
+        <div class="left_section box">
+            <!-- left inputs -->
+            <h2>Form Inputs</h2>
+            <form action="/api" class="box main_form">
+                <div>
+                    <label for="resto">Filter Restaurant List</label>
+                    <input type="text" name="resto" id="resto"/>
+                </div>
+                <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                <button type="submit" id="get-resto">Change Restaurants</button>
+            </form>
+        </div>
+        <div class="right_section box">
+            <!-- right side -->
+            <!-- images box -->
+            <h2>Local Restaurants</h2>
+            <div class="box" id="restaurant_list">
+                <!-- description box -->
+                A list of restaurants from an API
+            </div>
+        </div>
+      </div>
+      <footer class="footer">
+        My GitHub Account:
+        <a href="http://github.com/zcanast/" target="_blank" rel="noopener noreferrer">zcanast</a>
+    </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
