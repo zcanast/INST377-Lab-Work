@@ -7,8 +7,6 @@
     So: they style the tags directly
   */
   
-  #map { height: 180px; }
-  
   html {
     background-color: rgb(64, 198, 255);
     font-size: 16px;
@@ -313,6 +311,15 @@
         justify-content: center;
         align-items: center;
       }
+  }
+
+  /* MAP STYLES */
+  #map { 
+    display: block;
+    width: 400px;
+    height: 380px;
+    border: 2px dashed rgb(99,99,99);
+    margin-bottom: 1rem; 
   }
   
   /* 
